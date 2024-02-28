@@ -1,6 +1,9 @@
 helm install prometheus  -f values.yaml prometheus-community/kube-prometheus-stack
 
 helm install emas-storage nfs-subdir-external-provisioner/nfs-subdir-external-provisioner --values values.yaml
+helm install prometheus-nfs-client nfs-subdir-external-provisioner/nfs-subdir-external-provisioner -f values.yaml
+bir defe emas-storage adinda bir defe de nfs-client adinda yarat
+
 
 add secret with name prometheus prometheus-kube-prometheus-admission in prometheus namespace
 
