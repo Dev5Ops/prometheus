@@ -1,7 +1,6 @@
 helm install prometheus  -f values.yaml prometheus-community/kube-prometheus-stack
 
-#helm install nfs-storage nfs-subdir-external-provisioner/nfs-subdir-external-provisioner     --set nfs.server=172.31.51.90     --set nfs.path=/ifs/dost-isi-cl1/NFS/Kubernetes --set storageClass.name=emas-storage
-#helm install nfs-client nfs-subdir-external-provisioner/nfs-subdir-external-provisioner     --set nfs.server=172.31.51.90     --set nfs.path=/ifs/dost-isi-cl1/NFS/Kubernetes
+helm install emas-storage nfs-subdir-external-provisioner/nfs-subdir-external-provisioner --values values.yaml
 
 add secret with name prometheus prometheus-kube-prometheus-admission in prometheus namespace
 
